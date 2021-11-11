@@ -4,8 +4,10 @@
 /**
  * Fetch list of transactions from the Stellar network.
  */
- var server = new StellarSdk.Server("https://horizon.stellar.org");
-​
+ var server = new StellarSdk.Server("https://horizon.stellar.org");  
+
+ document.getElementById("fetchBtn").addEventListener("click", handleFetchTransactions);
+
  var handleFetchTransactions = () => {
      console.log("Fetching transactions...");
      let trxList = document.getElementById("transactions");
